@@ -1,0 +1,16 @@
+.media-tools/
+.media-inspection/
+_site/
+.quarto/
+Thumbs.db
+
+# Original recordings are preserved locally; publish the optimized loops in assets/media.
+/1customsearch.mp4
+/1b-select_distance.mp4
+/2-browse properties.mp4
+/3-exploreneighbourhood-and-amenities.mp4
+/generate-property-report.mp4
+/generate-area-report.mp4
+
+/.quarto/
+**/*.quarto_ipynb

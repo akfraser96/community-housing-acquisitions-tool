@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A guided demo of the LEMR Community Housing Acquisition Tool for finding, comparing, and understanding acquisition opportunities.">
+
+<title>LEMR Community Housing Acquisition Tool</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="./assets/brand/favicon-32x32.png" rel="icon" type="image/png">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="assets/css/styles.css">
+<meta property="og:title" content="LEMR Community Housing Acquisition Tool">
+<meta property="og:description" content="A guided demo of the LEMR Community Housing Acquisition Tool for finding, comparing, and understanding acquisition opportunities.">
+<meta property="og:image" content="assets/media/og-preview.png">
+<meta property="og:site_name" content="LEMR Community Housing Acquisition Tool">
+<meta name="twitter:title" content="LEMR Community Housing Acquisition Tool">
+<meta name="twitter:description" content="A guided demo of the LEMR Community Housing Acquisition Tool for finding, comparing, and understanding acquisition opportunities.">
+<meta name="twitter:image" content="assets/media/og-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full column-page" id="quarto-document-content">
+
+<header id="title-block-header">
+<h1 class="title display-7">LEMR Community Housing Acquisition Tool</h1>
+
+</header>
+
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header" aria-label="Primary">
+  <a class="brand" href="#summary" aria-label="LEMR Community Housing Acquisition Tool home">
+    <img class="brand-logo" src="assets/brand/lemr-logo.svg" alt="LEMR — Low-end of Market Rental Housing Monitor">
+    <span class="brand-name">Community Housing Acquisition Tool</span>
+  </a>
+  <a class="header-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+</header>
+
+<div id="main-content" class="page-columns page-full">
+  <aside class="demo-notice section-shell" role="note">
+    <p><strong>Note:</strong> This website is for unofficial demonstration purposes. An official webpage for the LEMR platform will be available soon including information about accessing the tool.</p>
+  </aside>
+
+  <section class="summary section-shell" id="summary" aria-labelledby="summary-title">
+    <div class="section-kicker">What it does</div>
+    <div class="summary-grid">
+      <h2 id="summary-title" class="anchored">Summary</h2>
+      <div class="summary-copy">
+        <p class="lead">LEMR brings property, planning, housing-need, demographic, and market information into one acquisition-screening workspace for community housing providers.</p>
+        <p>This tool enables community housing providers to directly engage with real estate analytics software and to support identification of opportunities relevant to the community housing sector and to support decision making and funding application development. Teams can translate an acquisition strategy into a custom search, compare both listed and off-market opportunities, understand the context around a site, and export detailed reports for internal discussion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workflow" id="how-it-works" aria-labelledby="workflow-title">
+    <div class="workflow-heading section-shell">
+      <p class="section-kicker">Example workflow</p>
+      <h2 id="workflow-title" class="anchored">See how the Tool Works</h2>
+      <p>Follow one example workflow, from search to report.</p>
+    </div>
+
+    <article class="step section-shell" id="custom-search">
+      <div class="step-copy">
+        <span class="step-number">01</span>
+        <p class="step-label">Define the opportunity</p>
+        <h3 class="anchored">Complete a custom search</h3>
+        <p>Specify property type, property size, and the strategic priorities that matter to your organization—for example, proximity to existing sites, preserving at-risk affordable housing, redevelopment potential, serving communities experiencing marginalization, or access to transit.</p>
+        <p>Choose a target neighbourhood, census tract, or ward, or search within a set distance of one or more addresses, such as properties already in your portfolio.</p>
+        <div class="feature-tags" aria-label="Custom search inputs"><span>Property fit</span><span>Acquisition strategy</span><span>Local need</span><span>Address radius</span></div>
+      </div>
+      <div class="step-media media-stack">
+        <figure class="demo-figure figure">
+          <div class="video-shell">
+            <video class="demo-video" muted="" loop="" playsinline="" preload="metadata" poster="assets/media/posters/custom-search.jpg" aria-label="LEMR custom search demonstration">
+              <source src="assets/media/custom-search.mp4" type="video/mp4">
+            </video>
+            <button class="video-control" type="button" aria-label="Play custom search demonstration" data-state="paused"><span aria-hidden="true">▶</span></button>
+          </div>
+          <figcaption>Set the geography, property requirements, and scoring preferences that define a strong fit.</figcaption>
+        </figure>
+        <figure class="still-figure figure">
+          <img src="assets/media/distance-search-example.webp" alt="LEMR map showing ranked properties within set distances of three sample addresses" loading="lazy" class="figure-img">
+          <figcaption>An illustrative portfolio-based search using ONPHA offices, York University, and Centennial College as sample addresses.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="step section-shell" id="browse-properties">
+      <div class="step-copy">
+        <span class="step-number">02</span>
+        <p class="step-label">Move from many to a shortlist</p>
+        <h3 class="anchored">Browse and filter properties</h3>
+        <p>Properties are filtered, scored, and ranked according to your inputs. Listed properties are identified alongside opportunities that are not currently on the market.</p>
+        <p>Review results in the ranked-property panel, inspect their location on the map, or switch to the list view for a more detailed comparison.</p>
+        <div class="feature-tags" aria-label="Property browsing views"><span>Ranked panel</span><span>Map view</span><span>List view</span><span>Listing status</span></div>
+      </div>
+      <div class="step-media">
+        <figure class="demo-figure figure">
+          <div class="video-shell">
+            <video class="demo-video" muted="" loop="" playsinline="" preload="metadata" poster="assets/media/posters/browse-properties.jpg" aria-label="LEMR browse and filter properties demonstration">
+              <source src="assets/media/browse-properties.mp4" type="video/mp4">
+            </video>
+            <button class="video-control" type="button" aria-label="Play browse properties demonstration" data-state="paused"><span aria-hidden="true">▶</span></button>
+          </div>
+          <figcaption>Move between map and list views while keeping the same ranked search results in focus.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="step section-shell" id="explore-context">
+      <div class="step-copy">
+        <span class="step-number">03</span>
+        <p class="step-label">Understand what surrounds a site</p>
+        <h3 class="anchored">Explore neighbourhood context and amenities</h3>
+        <p>Adjust the map to show housing need, demographic patterns, and market trends. Build a composite indicator from the measures most important to your organization.</p>
+        <p>Add context layers such as transit, nearby non-profit land, and government-owned land, then zoom from citywide patterns to the blocks surrounding a candidate property.</p>
+        <div class="feature-tags" aria-label="Neighbourhood context layers"><span>Housing need</span><span>Demographics</span><span>Market trends</span><span>Transit &amp; land</span></div>
+      </div>
+      <div class="step-media">
+        <figure class="demo-figure figure">
+          <div class="video-shell">
+            <video class="demo-video" muted="" loop="" playsinline="" preload="metadata" poster="assets/media/posters/explore-context.jpg" aria-label="LEMR neighbourhood context and amenities demonstration">
+              <source src="assets/media/explore-context.mp4" type="video/mp4">
+            </video>
+            <button class="video-control" type="button" aria-label="Play neighbourhood context demonstration" data-state="paused"><span aria-hidden="true">▶</span></button>
+          </div>
+          <figcaption>Layer transit, affordability, land ownership, and other indicators directly onto the opportunity map.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="step section-shell" id="property-report">
+      <div class="step-copy">
+        <span class="step-number">04</span>
+        <p class="step-label">Bring site evidence together</p>
+        <h3 class="anchored">Generate a property report</h3>
+        <p>Create an exportable overview of a candidate property, including key site metrics, pricing and acquisition flags, amenities and maintenance information, land and zoning context, building evaluations, inspection history, recent permits, and aerial imagery.</p>
+        <p>Potential concerns and missing information are surfaced as prompts for follow-up, helping the team focus the next stage of due diligence.</p>
+        <div class="feature-tags" aria-label="Property report contents"><span>Strategic fit</span><span>Risk flags</span><span>Building condition</span><span>Zoning &amp; permits</span></div>
+      </div>
+      <div class="step-media">
+        <figure class="demo-figure figure">
+          <div class="video-shell report-video">
+            <video class="demo-video" muted="" loop="" playsinline="" preload="metadata" poster="assets/media/posters/property-report.jpg" aria-label="LEMR property report demonstration">
+              <source src="assets/media/property-report.mp4" type="video/mp4">
+            </video>
+            <button class="video-control" type="button" aria-label="Play property report demonstration" data-state="paused"><span aria-hidden="true">▶</span></button>
+          </div>
+          <figcaption>Review site, building, inspection, permit, and zoning information in one consistent report.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="step section-shell" id="area-snapshot">
+      <div class="step-copy">
+        <span class="step-number">05</span>
+        <p class="step-label">See the broader acquisition context</p>
+        <h3 class="anchored">Generate an area snapshot report</h3>
+        <p>Summarize the selected neighbourhood or search area with a map and overview, the properties matching your criteria, and a demographic and socioeconomic profile.</p>
+        <p>The snapshot also brings in local real estate and development activity, lower-end-of-market rental trends, and residential building-permit information—useful context for comparing areas and briefing decision-makers.</p>
+        <div class="feature-tags" aria-label="Area snapshot contents"><span>Neighbourhood profile</span><span>Demographics</span><span>Market pressures</span><span>Housing need</span></div>
+      </div>
+      <div class="step-media">
+        <figure class="demo-figure figure">
+          <div class="video-shell report-video">
+            <video class="demo-video" muted="" loop="" playsinline="" preload="metadata" poster="assets/media/posters/area-snapshot.jpg" aria-label="LEMR area snapshot report demonstration">
+              <source src="assets/media/area-snapshot.mp4" type="video/mp4">
+            </video>
+            <button class="video-control" type="button" aria-label="Play area snapshot demonstration" data-state="paused"><span aria-hidden="true">▶</span></button>
+          </div>
+          <figcaption>Compare local demographics, development patterns, matching properties, and market context in one snapshot.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="step step-wide section-shell" id="additional-views">
+      <div class="step-copy">
+        <span class="step-number">06</span>
+        <p class="step-label">Return to recurring questions quickly</p>
+        <h3 class="anchored">Apply filters or use pre-set Quick Searches</h3>
+        <p>Build your own filter combinations or jump directly to high-value views. For example, highlight areas experiencing affordability pressure, map government and community-housing land, or focus on active listings.</p>
+        <p>Quick Searches create a consistent starting point for common acquisition questions while leaving the underlying filters open for refinement.</p>
+        <div class="feature-tags" aria-label="Example quick searches"><span>Affordability pressure</span><span>Public &amp; non-profit land</span><span>Active listings</span></div>
+      </div>
+      <div class="step-media">
+        <figure class="still-figure wide-still figure">
+          <img src="assets/media/additional-views.webp" alt="Three LEMR views showing affordability pressures, government and community housing land, and active listings" loading="lazy" class="figure-img">
+          <figcaption>Examples of pre-set views that surface recurring, high-value acquisition questions.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="section-shell">
+    <p><strong>LEMR Community Housing Acquisition Tool</strong></p>
+    <p>A real estate analytics platform built for the community housing sector.</p>
+  </div>
+</footer>
+
+
+
+</main> <!-- /main -->
+<script src="assets/js/video-demos.js" defer=""></script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

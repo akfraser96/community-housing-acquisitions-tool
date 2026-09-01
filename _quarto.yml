@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - assets/media
+    - assets/brand
+
+website:
+  title: "LEMR Community Housing Acquisition Tool"
+  favicon: assets/brand/favicon-32x32.png
+  # Add the final GitHub Pages URL here to emit absolute social-card URLs.
+  # site-url: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
+  search: false
+  navbar: false
+
+lang: en-CA
+
+format:
+  html:
+    theme: cosmo
+    css: assets/css/styles.css
+    include-after-body: assets/includes/scripts.html
+    page-layout: full
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto
