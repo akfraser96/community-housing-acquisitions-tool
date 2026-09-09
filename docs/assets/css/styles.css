@@ -86,6 +86,7 @@ img, video { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   min-height: 72px;
   padding: 10px max(24px, calc((100vw - var(--max)) / 2));
   border-bottom: 1px solid rgba(15, 38, 48, 0.09);
@@ -106,6 +107,7 @@ img, video { display: block; max-width: 100%; }
 }
 
 .brand-name {
+  max-width: 175px;
   padding-left: 14px;
   border-left: 1px solid var(--line);
   color: var(--ink-soft);
@@ -122,6 +124,40 @@ img, video { display: block; max-width: 100%; }
 }
 
 .header-link span { margin-left: 5px; }
+
+.header-nav, .primary-links { display: flex; align-items: center; gap: 22px; }
+.header-nav { flex-shrink: 0; }
+.header-link { white-space: nowrap; }
+.header-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.page-menu { position: relative; color: var(--teal-dark); font-size: 14px; }
+.page-menu > summary {
+  padding: 10px 14px;
+  border: 1px solid #acd9d2;
+  border-radius: 999px;
+  background: var(--mint);
+  cursor: pointer;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.toc-panel {
+  position: absolute;
+  top: calc(100% + 18px);
+  right: 0;
+  width: min(340px, calc(100vw - 30px));
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.toc-panel a { display: block; padding: 8px 6px; text-decoration: none; border-radius: 6px; }
+.toc-panel > a { font-weight: 750; }
+.toc-panel a:hover { background: var(--mist); }
+.toc-panel ol { margin: 0 0 10px; padding-left: 26px; color: var(--ink-soft); font-size: 13px; }
+.page-menu summary:focus-visible, .toc-panel a:focus-visible,
+.partner-logos a:focus-visible, .contact-person a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 
 .section-kicker,
 .step-label {
@@ -171,7 +207,9 @@ img, video { display: block; max-width: 100%; }
 }
 
 .summary h2,
-.workflow-heading h2 {
+.workflow-heading h2,
+.next-section h2,
+.support-section h2 {
   margin-bottom: 24px;
   font-size: clamp(42px, 5vw, 70px);
   font-weight: 650;
@@ -181,6 +219,18 @@ img, video { display: block; max-width: 100%; }
 
 .summary-copy { max-width: 810px; color: var(--ink-soft); }
 .summary-copy .lead { color: var(--ink); font-size: clamp(23px, 2.4vw, 31px); line-height: 1.42; }
+.collaboration-credit { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.collaboration-credit > p { font-size: 16px; }
+.partner-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 42px; margin-top: 26px; }
+.partner-logos a { display: flex; align-items: center; min-height: 98px; }
+.partner-logos img { width: 230px; height: auto; max-height: 98px; object-fit: contain; }
+.next-section, .support-section { padding-block: 104px; }
+.support-section { background: var(--mint); }
+.contact-list { display: grid; gap: 26px; margin-top: 32px; }
+.contact-person { border-top: 1px solid var(--line); padding-top: 22px; }
+.contact-person h3 { margin-bottom: 4px; color: var(--ink); font-size: 21px; font-weight: 700; }
+.contact-person p { margin-bottom: 6px; font-size: 15px; }
+.contact-person a { color: var(--teal-dark); text-underline-offset: 4px; overflow-wrap: anywhere; }
 .workflow { background: var(--white); }
 .workflow-heading { padding-block: 118px 72px; text-align: center; }
 .workflow-heading h2 { margin-inline: auto; }
@@ -284,6 +334,10 @@ figcaption {
 .site-footer .section-shell { display: flex; justify-content: space-between; gap: 24px; }
 .site-footer p { margin: 0; }
 
+@media (max-width: 1180px) {
+  .primary-links { display: none; }
+}
+
 @media (max-width: 900px) {
   .brand-name { display: none; }
   .summary-grid, .step { grid-template-columns: 1fr; }
@@ -294,8 +348,12 @@ figcaption {
   body { font-size: 16px; }
   .section-shell { width: min(calc(100% - 30px), var(--max)); }
   .site-header { min-height: 64px; padding-inline: 15px; }
-  .brand-logo { width: 190px; }
+  .site-header { gap: 12px; }
+  .brand { min-width: 0; }
+  .brand-logo { width: min(190px, 100%); }
+  .page-menu > summary { padding: 9px 11px; font-size: 12px; }
   .summary { padding-block: 86px 78px; }
+  .next-section, .support-section { padding-block: 78px; }
   .workflow-heading { padding-block: 84px 50px; }
   .step { padding-block: 72px; }
   .step-number { margin-bottom: 28px; }

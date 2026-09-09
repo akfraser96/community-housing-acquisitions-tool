@@ -89,7 +89,31 @@ ul.task-list li input[type="checkbox"] {
     <img class="brand-logo" src="assets/brand/lemr-logo.svg" alt="LEMR — Low-end of Market Rental Housing Monitor">
     <span class="brand-name">Community Housing Acquisition Tool</span>
   </a>
-  <a class="header-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+  <nav class="header-nav" aria-label="Page sections">
+    <div class="primary-links">
+      <a class="header-link" href="#summary">Summary</a>
+      <a class="header-link" href="#how-it-works">How it works</a>
+      <a class="header-link" href="#whats-next">What’s next</a>
+      <a class="header-link" href="#how-to-support">Get involved</a>
+    </div>
+    <details class="page-menu">
+      <summary>On this page</summary>
+      <nav class="toc-panel" aria-label="Table of contents">
+        <a href="#summary">Summary</a>
+        <a href="#how-it-works">See how the tool works</a>
+        <ol>
+          <li><a href="#custom-search">Complete a custom search</a></li>
+          <li><a href="#browse-properties">Browse and filter properties</a></li>
+          <li><a href="#explore-context">Explore neighbourhood context</a></li>
+          <li><a href="#property-report">Generate a property report</a></li>
+          <li><a href="#area-snapshot">Generate an area snapshot</a></li>
+          <li><a href="#additional-views">Filters and Quick Searches</a></li>
+        </ol>
+        <a href="#whats-next">What’s Next?</a>
+        <a href="#how-to-support">How to Support?</a>
+      </nav>
+    </details>
+  </nav>
 </header>
 
 <div id="main-content" class="page-columns page-full">
@@ -104,6 +128,17 @@ ul.task-list li input[type="checkbox"] {
       <div class="summary-copy">
         <p class="lead">LEMR brings property, planning, housing-need, demographic, and market information into one acquisition-screening workspace for community housing providers.</p>
         <p>This tool enables community housing providers to directly engage with real estate analytics software and to support identification of opportunities relevant to the community housing sector and to support decision making and funding application development. Teams can translate an acquisition strategy into a custom search, compare both listed and off-market opportunities, understand the context around a site, and export detailed reports for internal discussion.</p>
+        <div class="collaboration-credit">
+          <p>This tool was developed through a collaboration between the Canadian Centre for Housing Rights (CCHR) and the Ontario Non-Profit Housing Association (ONPHA).</p>
+          <div class="partner-logos">
+            <a href="https://housingrightscanada.com/" target="_blank" rel="noopener noreferrer" aria-label="Canadian Centre for Housing Rights (CCHR) website (opens in a new tab)">
+              <img src="assets/brand/cchr-logo.svg" alt="Canadian Centre for Housing Rights" width="277" height="98" loading="lazy">
+            </a>
+            <a href="https://onpha.on.ca/" target="_blank" rel="noopener noreferrer" aria-label="Ontario Non-Profit Housing Association (ONPHA) website (opens in a new tab)">
+              <img src="assets/brand/onpha-logo.svg" alt="Ontario Non-Profit Housing Association" loading="lazy">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -247,6 +282,38 @@ ul.task-list li input[type="checkbox"] {
     </article>
   </section>
 
+  <section class="next-section section-shell" id="whats-next" aria-labelledby="next-title">
+    <div class="summary-grid">
+      <h2 id="next-title" class="anchored">What’s Next?</h2>
+      <div class="summary-copy">
+        <p class="lead">The tool is in the final stages of development and will be available soon.</p>
+        <p>We are preparing to use the tool in acquisition projects and partnering with community housing providers to better understand their acquisition processes and needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="support-section" id="how-to-support" aria-labelledby="support-title">
+    <div class="section-shell summary-grid">
+      <h2 id="support-title" class="anchored">How to Support?</h2>
+      <div class="summary-copy">
+        <p class="lead">Help shape the tool by taking part in user testing or sharing your acquisition experience and interests.</p>
+        <p>We would like to hear from community housing providers about their acquisition processes and how the tool could support their work.</p>
+        <p>To get involved or learn more about the tool, please contact:</p>
+        <div class="contact-list">
+          <div class="contact-person">
+            <h3 class="anchored">Adam Fraser</h3>
+            <p>Ontario Non-Profit Housing Association</p>
+            <a href="mailto:adam.fraser@onpha.org">adam.fraser@onpha.org</a>
+          </div>
+          <div class="contact-person">
+            <h3 class="anchored">Jon Paul Mathias</h3>
+            <p>Canadian Centre for Housing Rights</p>
+            <a href="mailto:jmathias@housingrightscanada.com">jmathias@housingrightscanada.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 <footer class="site-footer">
@@ -260,6 +327,7 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script src="assets/js/video-demos.js" defer=""></script>
+<script src="assets/js/navigation.js" defer=""></script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
